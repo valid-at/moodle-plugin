@@ -27,6 +27,9 @@ require_once(__DIR__ . '/fixtures/fake_http.php');
 require_once($CFG->libdir . '/completionlib.php');
 require_once($CFG->dirroot . '/completion/completion_completion.php');
 
+#[\PHPUnit\Framework\Attributes\CoversClass(\local_validat\issuer::class)]
+#[\PHPUnit\Framework\Attributes\CoversClass(\local_validat\observer::class)]
+#[\PHPUnit\Framework\Attributes\CoversClass(\local_validat\task\issue_certificate::class)]
 /**
  * Tests from course completion to certificate.
  *
@@ -37,9 +40,6 @@ require_once($CFG->dirroot . '/completion/completion_completion.php');
  * @covers     \local_validat\observer
  * @covers     \local_validat\task\issue_certificate
  */
-#[\PHPUnit\Framework\Attributes\CoversClass(\local_validat\issuer::class)]
-#[\PHPUnit\Framework\Attributes\CoversClass(\local_validat\observer::class)]
-#[\PHPUnit\Framework\Attributes\CoversClass(\local_validat\task\issue_certificate::class)]
 final class issuer_test extends \advanced_testcase {
     /** @var int 2026-03-01 23:30 UTC, already 2 March in Vienna */
     const COMPLETED = 1772407800;
